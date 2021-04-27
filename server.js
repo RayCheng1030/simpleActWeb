@@ -21,5 +21,5 @@ mongoose.connect(process.env.DB_URL,
 });
 
 app.get('/',(req,res)=>{
-    res.send('<h1>Welcome Rainmaker96.com 4/27 2021</h1>');
+    res.send('<h1>Welcome Rainmaker96.com 4/27 2021 10:45 testing</h1>');
 });
