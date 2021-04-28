@@ -20,8 +20,12 @@ mongoose.connect(process.env.DB_URL,
     })
 });
 
+// register view engine
+app.set('view engine','ejs');
+
+
 app.get('/',(req,res)=>{
     //res.send('<h1>Welcome Rainmaker96.com 4/27 2021 10:45 testing</h1>');
     //res.sendFile(__dirname+'/html/image.html');
-    res.send(__dirname+'=__dirname');
+    res.render('image',{dirName:__dirname+"views/test.png"});
 });
