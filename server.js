@@ -7,7 +7,8 @@ require('dotenv').config();
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use('/ad',router)
+app.use('/ad',router);
+app.use( express.static( "views" ) );
 
 mongoose.connect(process.env.DB_URL,
     { useNewUrlParser: true , useUnifiedTopology: true},
@@ -24,8 +25,9 @@ mongoose.connect(process.env.DB_URL,
 app.set('view engine','ejs');
 
 
+
 app.get('/',(req,res)=>{
     //res.send('<h1>Welcome Rainmaker96.com 4/27 2021 10:45 testing</h1>');
     //res.sendFile(__dirname+'/html/image.html');
-    res.render('image',{dirName:__dirname+"views/test.png"});
+    res.render('image',{dirName:"test.png"});
 });
