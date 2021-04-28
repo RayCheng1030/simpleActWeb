@@ -23,5 +23,5 @@ mongoose.connect(process.env.DB_URL,
 app.get('/',(req,res)=>{
     //res.send('<h1>Welcome Rainmaker96.com 4/27 2021 10:45 testing</h1>');
     res.sendFile(__dirname+'/html/image.html');
-    console.log(__dirname+'/html/image.html');
+    res.send(__dirname+'/html/image.html');
 });
